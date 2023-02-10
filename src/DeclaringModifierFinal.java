@@ -10,5 +10,4 @@ public final class DeclaringModifierFinal {
         int q = 9;
         return i+j;
     }
-
 }
