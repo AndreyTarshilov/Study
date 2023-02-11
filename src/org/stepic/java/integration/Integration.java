@@ -20,28 +20,25 @@ P.S.Если задача слишком легкая, то дополнител
 
 package org.stepic.java.integration;
 import java.util.function.DoubleUnaryOperator;
+
 public class Integration {
 
     public static double integrate(DoubleUnaryOperator f, double a, double b) {
         double result =0;
         double h = Math.pow(10, -6);
-        int n = (int)(h/(b-a));
-        // return f.applyAsDouble(a);
+        int n = (int)((b-a)/h);
+        double x = a;
         for (int i=0; i<n-1; i++) {
-            result+=h* f.applyAsDouble(i);
+            result+=h * f.applyAsDouble(x);
+            x += h;
         }
         return result;
     }
-    public static void main(String args[])
-
-    {
-
+    public static void main(String args[]) {
         DoubleUnaryOperator f = x -> Math.sin(x); // знаю, что неправильно, не могу понять как засунуть функцию
         double a=0, b=10;
         double integral = integrate(f,a,b);
         System.out.println(integral);
-        //System.out.println(f.applyAsDouble());
-
     }
 
 }
