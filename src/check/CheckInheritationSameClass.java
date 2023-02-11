@@ -1,3 +1,5 @@
+package check;
+
 public class CheckInheritationSameClass {
    static class Ok {
        int Summa(int FirstSummand, int SecondSummand) {
@@ -6,7 +8,6 @@ public class CheckInheritationSameClass {
 
     }
     public static class InheritOK extends Ok {
-        @Override
         int Summa(int FirstSummand, int SecondSummand) {
             // return (FirstSummand + SecondSummand + ThirdSummand)*2;
             return (FirstSummand + SecondSummand)*2;
