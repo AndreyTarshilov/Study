@@ -32,4 +32,17 @@ public class Integration {
         }
         return result;
     }
+    public static void main(String args[])
+
+    {
+
+        DoubleUnaryOperator f = x -> Math.sin(x); // знаю, что неправильно, не могу понять как засунуть функцию
+        double a=0, b=10;
+        double integral = integrate(f,a,b);
+        System.out.println(integral);
+        //System.out.println(f.applyAsDouble());
+
+    }
+
 }
+
