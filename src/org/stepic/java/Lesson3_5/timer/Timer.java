@@ -1,4 +1,4 @@
-package org.stepic.java.timer;
+package org.stepic.java.Lesson3_5.timer;
 
 public class Timer {
     public long measureTime(Runnable runnable) {
