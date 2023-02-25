@@ -37,8 +37,8 @@ public class Integration {
     }
 
     public static void main(String args[]) {
-        DoubleUnaryOperator f = x -> Math.sin(x);
-        double a = 0, b = 10;
+        DoubleUnaryOperator f = x -> Math.tan(x);
+        double a = - 2, b = 5;
         double integral = integrate(f, a, b);
         System.out.println(integral);
     }

@@ -11,26 +11,33 @@ AsciiCharSequence будет занимать в два раза меньше п
 P.S. В Java 9 ожидается подобная оптимизация в самом классе String: http://openjdk.java.net/jeps/254 */
 
 package org.stepic.java.Lesson3_5.AsciiChar;
-import java.lang.CharSequence;
-public class AsciiCharSequence implements CharSequence {
 
-    AsciiCharSequence (byte[] Array) {
-        
+import java.lang.CharSequence;
+
+public class AsciiCharSequence implements CharSequence {
+    private byte[] array;
+    public AsciiCharSequence(byte[] array) {
+        this.array = array;
     }
     @Override
     public int length() {
-        return 0;
+        return array.length;
     }
-
     @Override
-    public char charAt(int index) {
-
-        return 0;
+    public char charAt(int indexNumber) {
+        return (char) array[indexNumber];
     }
-
     @Override
     public CharSequence subSequence(int start, int end) {
-        return null;
+        byte[] arraySequence = new byte[end - start];
+        for (int i = 0; i < end - start; i++) {
+            arraySequence[i] = array[i + start];
+        }
+        return new AsciiCharSequence(arraySequence);
+    }
+    @Override
+    public String toString() {
+        return new String(array);
     }
 }
 
