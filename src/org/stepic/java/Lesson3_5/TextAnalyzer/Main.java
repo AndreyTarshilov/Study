@@ -103,12 +103,11 @@ public class Main {
             numberOfTest++;
         }
     }
-
     public Label checkLabels(TextAnalyzer[] analyzers, String text) {
-        Label label;
         for (TextAnalyzer analyzer: analyzers) {
-            label = analyzer.processText(text);
-            if (label != Label.OK) return label;
+            Label label = analyzer.processText(text);
+            if (label != Label.OK) {
+                return label; }
         }
         return Label.OK;
     }}
