@@ -1,12 +1,12 @@
-import JavaRush.LuxuryAuto;
+package org.stepic.java.Lesson3_4;
 
-/* Дан класс ComplexNumber. Переопределите в нем методы equals() и hashCode() так, чтобы equals() сравнивал экземпляры
-ComplexNumber по содержимому полей re и im, а hashCode() был бы согласованным с реализацией equals().
+/* Дан класс org.stepic.java.Lesson3_4.ComplexNumber. Переопределите в нем методы equals() и hashCode() так, чтобы equals() сравнивал экземпляры
+org.stepic.java.Lesson3_4.ComplexNumber по содержимому полей re и im, а hashCode() был бы согласованным с реализацией equals().
 Реализация hashCode(), возвращающая константу или не учитывающая дробную часть re и im, засчитана не будет
 
 Пример
-ComplexNumber a = new ComplexNumber(1, 1);
-ComplexNumber b = new ComplexNumber(1, 1);
+org.stepic.java.Lesson3_4.ComplexNumber a = new org.stepic.java.Lesson3_4.ComplexNumber(1, 1);
+org.stepic.java.Lesson3_4.ComplexNumber b = new org.stepic.java.Lesson3_4.ComplexNumber(1, 1);
 // a.equals(b) must return true
 // a.hashCode() must be equal to b.hashCode()
 
