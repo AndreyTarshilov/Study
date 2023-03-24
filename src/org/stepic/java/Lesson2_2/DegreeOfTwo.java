@@ -1,3 +1,5 @@
+package org.stepic.java.Lesson2_2;
+
 public class DegreeOfTwo {
     public static boolean isPowerOfTwo(int value) {
         int c = Math.abs(value);

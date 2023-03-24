@@ -1,10 +1,7 @@
+package org.stepic.java.Lesson2_1;
 
 public class Boolean4 {
     public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
-        //return a & b & c & d;
-        //return (a!=b) == (c!=d);
-        //return (a && b) && (c && d);
-        //return (a == b) && (c == d);
         return ((a & b) == true) |((a & c) == true) |((a & d) == true) |((b & c) == true) |((b & d) == true) |((c & d) == true);
     }
 

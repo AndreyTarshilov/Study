@@ -1,3 +1,5 @@
+package org.stepic.java.Lesson2_2;
+
 public class UnicodeAfter {
     public static char charExpression(int a) {
 

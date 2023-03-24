@@ -1,4 +1,4 @@
-package org.stepic.java.Lesson4_1;
+package org.stepic.java.Lesson4_1.ClassCastException;
 
 public class B extends A {
     public static Object b = new String("y");

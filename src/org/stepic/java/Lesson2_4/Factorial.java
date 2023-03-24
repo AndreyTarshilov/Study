@@ -1,3 +1,5 @@
+package org.stepic.java.Lesson2_4;
+
 import java.math.BigInteger;
 
 /**
