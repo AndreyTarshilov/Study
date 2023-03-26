@@ -1,4 +1,4 @@
-package org.stepic.java.Lesson3_5.exstatic;
+package VickorPrograms.exstatic;
 
 public class ExStatic { // external non-static class
     private static String HELLO; // creating static variable
