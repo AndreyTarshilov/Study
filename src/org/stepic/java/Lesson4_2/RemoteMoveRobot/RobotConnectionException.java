@@ -1,8 +1,4 @@
-package RemoteMoveRobot;
-
-import org.stepic.java.Lesson3_5.exstatic.ExStatic;
-
-import java.io.IOException;
+package org.stepic.java.Lesson4_2.RemoteMoveRobot;
 
 public class RobotConnectionException extends RuntimeException {
     public RobotConnectionException(String message) {
