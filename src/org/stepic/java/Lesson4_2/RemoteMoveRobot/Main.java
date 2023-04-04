@@ -1,16 +1,21 @@
 package org.stepic.java.Lesson4_2.RemoteMoveRobot;
 
+import java.util.logging.Logger;
+
 public class Main {
+    private static final Logger log = Logger.getLogger("RobotLoger");
 
     public static void main(String[] args) {
-
-        //RobotConnectionException mistakeOfConnection = new RobotConnectionException("Another exception");
         RobotConnectionException mistakeSetUpOfConnection = new RobotConnectionException("Another exception", null); // or getCause() instead null
-        //mistakeSetUpOfConnection.
-        // MoveRobot.moveRobot(("Good connection"), 3,4);
-        /* try { throw RuntimeException anotherException = new IOException("Another exception");
-        }
-        catch (Exception e) {} */
+
+        RobotConnectionManager manager = new RobotConnectionManager() {
+            @Override
+            public RobotConnection getConnection() {
+                return new MoveRobot.RobotConnectionImpl(1);
+            }
+        };
+        MoveRobot robot = new MoveRobot();
+        robot.moveRobot(manager, 1, 1);
     }
 
 
