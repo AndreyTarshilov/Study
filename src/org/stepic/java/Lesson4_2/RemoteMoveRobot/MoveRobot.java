@@ -23,7 +23,7 @@ public class MoveRobot {
         }
     }
 
-    public static class RobotConnectionImpl implements  RobotConnection {
+    public static class RobotConnectionImpl implements RobotConnection {
         private static int connectionCount = 0;
         private int tryBeforeSuccess;
         public RobotConnectionImpl(int tryBeforeSuccess) {
